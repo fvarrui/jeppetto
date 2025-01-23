@@ -1,4 +1,4 @@
-package io.github.fvarrui.jeppetto.api;
+package io.github.fvarrui.jeppetto;
 
 import okhttp3.Interceptor;
 import okhttp3.Request;

@@ -1,4 +1,4 @@
-package io.github.fvarrui.jeppetto.api.model;
+package io.github.fvarrui.jeppetto.api.models;
 
 import com.google.gson.annotations.SerializedName;
 

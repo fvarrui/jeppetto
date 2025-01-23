@@ -1,4 +1,4 @@
-package io.github.fvarrui.jeppetto.api;
+package io.github.fvarrui.jeppetto;
 
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;

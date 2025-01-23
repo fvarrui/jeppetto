@@ -1,17 +1,35 @@
-package io.github.fvarrui.jeppetto.api.model;
+package io.github.fvarrui.jeppetto.api;
 
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Error response
+ */
 public class Error {
 
+    /**
+     * Error type
+     */
     private String type;
 
+    /**
+     * Error code
+     */
     private String code;
 
+    /**
+     * Error message
+     */
     private String message;
 
+    /**
+     * Error parameter
+     */
     private String param;
 
+    /**
+     * Event id
+     */
     @SerializedName("event_id")
     private String eventId;
 
@@ -53,5 +71,16 @@ public class Error {
 
     public void setEventId(String eventId) {
         this.eventId = eventId;
+    }
+
+    @Override
+    public String toString() {
+        return "Error{" +
+                "type='" + type + '\'' +
+                ", code='" + code + '\'' +
+                ", message='" + message + '\'' +
+                ", param='" + param + '\'' +
+                ", eventId='" + eventId + '\'' +
+                '}';
     }
 }

@@ -1,13 +1,12 @@
 package io.github.fvarrui.jeppetto.tests;
 
 import io.github.fvarrui.jeppetto.Jeppetto;
-import io.github.fvarrui.jeppetto.api.model.Model;
+import io.github.fvarrui.jeppetto.api.models.Model;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Properties;
 import java.util.ResourceBundle;
 
 public class ModelsTest {
@@ -21,7 +20,7 @@ public class ModelsTest {
     }
 
     @Test
-    public void testGetModels() throws IOException {
+    public void testGetModels() throws Exception {
         List<Model> models = jeppetto.getModels();
         assert models.stream().map(Model::getId).anyMatch(id -> id.equals("gpt-3.5-turbo"));
     }
@@ -30,7 +29,7 @@ public class ModelsTest {
     public void testError() {
         try {
             new Jeppetto("invalid-api-key").getModels();
-        } catch (IOException e) {
+        } catch (Exception e) {
             assert true;
         }
     }

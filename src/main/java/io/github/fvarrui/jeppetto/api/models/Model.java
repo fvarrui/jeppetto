@@ -1,8 +1,8 @@
-package io.github.fvarrui.jeppetto.api.model;
+package io.github.fvarrui.jeppetto.api.models;
 
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-import io.github.fvarrui.jeppetto.api.TimestampAdapter;
+import io.github.fvarrui.jeppetto.TimestampAdapter;
 
 import java.sql.Timestamp;
 
@@ -12,7 +12,6 @@ public class Model {
 
     private String object;
 
-    @JsonAdapter(TimestampAdapter.class)
     private Timestamp created;
 
     @SerializedName("owned_by")
