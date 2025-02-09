@@ -1,6 +1,6 @@
 # jeppetto
 
-ChatGPT API Client for Java
+Cliente Java de la API de OpenAI.
 
 ## Para desarrolladores
 
@@ -12,7 +12,7 @@ cd jeppetto
 mvn install -DskipTests
 ```
 
-> **Nota:** El flag `-DskipTests` se usa para saltar la ejecución de los tests unitarios.
+> **Nota:** El flag `-DskipTests` se usa para saltar la ejecución de los tests unitarios. Si se desea ejecutar los tests, se puede omitir este flag. Es necesario crear el fichero `src/test/resources/config.properties` con la variable `openai.api.key` que contenga la clave de la API de OpenAI para poder ejecutar los tests.
 
 Luego, en el archivo `pom.xml` del proyecto donde se quiera usar la librería, se debe agregar la dependencia:
 
