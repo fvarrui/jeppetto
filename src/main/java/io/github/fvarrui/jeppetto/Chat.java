@@ -8,6 +8,8 @@ import java.util.List;
 
 public class Chat {
 
+    private static final int N = 1;
+
     private final String model;
     private final Jeppetto jeppetto;
     private final List<Message> context = new ArrayList<>();
@@ -25,8 +27,7 @@ public class Chat {
     public AssistantMessage send(Message ... messages) throws Exception {
         RequestCompletion requestCompletion = new RequestCompletion();
         requestCompletion.setModel(model);
-        requestCompletion.setN(1);
-        // requestCompletion.setMaxCompletionTokens(500);
+        requestCompletion.setN(N);
         requestCompletion.getMessages().addAll(context);
         requestCompletion.getMessages().addAll(Arrays.asList(messages));
         ChatCompletion completion = jeppetto.chatCompletion(requestCompletion);
